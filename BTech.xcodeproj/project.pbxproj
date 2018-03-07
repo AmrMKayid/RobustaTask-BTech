@@ -13,6 +13,7 @@
 		26BFF409205053DE0090FF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26BFF408205053DE0090FF00 /* Assets.xcassets */; };
 		26BFF40C205053DE0090FF00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26BFF40A205053DE0090FF00 /* LaunchScreen.storyboard */; };
 		26BFF417205064060090FF00 /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFF416205064060090FF00 /* ApiModel.swift */; };
+		26BFF41A20506E9E0090FF00 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BFF41920506E9E0090FF00 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		26BFF40B205053DE0090FF00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26BFF40D205053DE0090FF00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26BFF416205064060090FF00 /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
+		26BFF41920506E9E0090FF00 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		26BFF400205053DE0090FF00 /* BTech */ = {
 			isa = PBXGroup;
 			children = (
+				26BFF41820506E870090FF00 /* Utils */,
 				26BFF413205053E90090FF00 /* Models */,
 				26BFF414205053F80090FF00 /* Views */,
 				26BFF4152050540B0090FF00 /* Controllers */,
@@ -89,6 +92,14 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		26BFF41820506E870090FF00 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				26BFF41920506E9E0090FF00 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +177,7 @@
 				26BFF404205053DE0090FF00 /* ViewController.swift in Sources */,
 				26BFF417205064060090FF00 /* ApiModel.swift in Sources */,
 				26BFF402205053DE0090FF00 /* AppDelegate.swift in Sources */,
+				26BFF41A20506E9E0090FF00 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
