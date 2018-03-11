@@ -76,7 +76,6 @@
 				26BFF413205053E90090FF00 /* Models */,
 				26BFF4152050540B0090FF00 /* Controllers */,
 				26BFF401205053DE0090FF00 /* AppDelegate.swift */,
-				26BFF403205053DE0090FF00 /* ViewController.swift */,
 				26BFF405205053DE0090FF00 /* Main.storyboard */,
 				26BFF408205053DE0090FF00 /* Assets.xcassets */,
 				26BFF40A205053DE0090FF00 /* LaunchScreen.storyboard */,
@@ -96,6 +95,7 @@
 		26BFF4152050540B0090FF00 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				26BFF403205053DE0090FF00 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
