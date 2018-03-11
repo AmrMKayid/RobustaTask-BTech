@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 struct BTechApi: Decodable {
     let ads: [Ads]!
     let categories: [Categories]!
@@ -46,7 +45,7 @@ struct Product: Decodable {
 }
 
 struct ImageSize: Decodable {
-    let small: String!
-    let medium: String!
-    let large: String!
+    let small: String
+    let medium: String
+    let large: String
 }
