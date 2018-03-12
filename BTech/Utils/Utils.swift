@@ -27,6 +27,7 @@ func JSONParser() {
             print(BTechAPI)
             //                print(BTechAPI.ads[1].id)
             
+            
         } catch let jsonError {
             print(jsonError)
         }
