@@ -14,6 +14,7 @@ struct BTechApi: Decodable {
     let recently_viewed: [Product]!
     let recommended: [Product]!
     let best_sellers: [Product]!
+    
 }
 
 struct Ads: Decodable {

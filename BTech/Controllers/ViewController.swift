@@ -10,20 +10,54 @@ import UIKit
 
 class ViewController: UICollectionViewController {
     
+    var API = [BTechApi]()
+    let apiURL = "http://private-b03be-mohammadhendy.apiary-mock.com/api/home"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-//        JSONParser()
+//
+//        let inputData = JsonAPI.data(using: .utf8)!
+//
+//        let decoder = JSONDecoder()
+//        decoder.dateDecodingStrategy = .iso8601
+//        let APII = try! decoder.decode(BTechApi.self, from: inputData)
         
-        // Ads Cell
+//        print(APII)
+        
+        /* Ads Cell */
         self.collectionView?.register(UINib(nibName: "AdsCell", bundle: nil), forCellWithReuseIdentifier: "AdsCell")
         
-        // Category Cell
+        /* Category Cell */
         self.collectionView?.register(UINib(nibName: "CategoryCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCell")
         
-        // Product Cell
+        /* Product Cell */
         self.collectionView?.register(UINib(nibName: "ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
         
+    }
+    
+    func JSONParser() {
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            guard let data = data else { return }
+            //Implement JSON decoding and parsing
+            do {
+                //Decode retrived data with JSONDecoder and assing type of Article object
+                self.API = try [JSONDecoder().decode(BTechApi.self, from: data)]
+//                print(self.API[0].ads.count)
+                
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            }.resume()
     }
     
     
@@ -32,13 +66,25 @@ class ViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        let inputData = JsonAPI.data(using: .utf8)!
+        
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let APII = try! decoder.decode(BTechApi.self, from: inputData)
         switch section {
         case 0:
-            return 1
+            return APII.ads.count
         case 1:
-            return 6
+            return APII.categories.count
+        case 2:
+            return APII.recently_viewed.count
+        case 3:
+            return APII.recommended.count
+        case 4:
+            return APII.best_sellers.count
         default:
-            return 3
+            return 0
         }
     }
     
